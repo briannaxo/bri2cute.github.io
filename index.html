@@ -24,11 +24,18 @@
 </head>
 <body>
     <!-- Audio element -->
-    <audio autoplay loop>
-        <source src="bgaudio.mp3" type="audio/mp3">
+    <audio id="backgroundAudio">
+        <source src="bgaudio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <h1 onclick="window.location.href = 'collage.html';">Brianna's Corner</h1>
+    <h1 onclick="playAudio(); window.location.href = 'collage.html';">Brianna's Corner</h1>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("backgroundAudio");
+            audio.play();
+        }
+    </script>
 </body>
 </html>
