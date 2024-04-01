@@ -18,21 +18,26 @@
         .image-grid img {
             max-width: 100%; /* Ensures images don't exceed grid item width */
             height: auto; /* Maintains aspect ratio */
+            cursor: pointer; /* Change cursor to pointer on hover */
         }
     </style>
 </head>
 <body>
     <div class="image-grid">
-        <img src="brianna.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
+        <img src="brianna.jpg" alt="Image 1" onclick="playAudio('bgaudio')">
+        <img src="image2.jpg" alt="Image 2" onclick="playAudio('audio2')">
         <!-- Add more images as needed -->
     </div>
 
-    <!-- Autoplay audio element -->
-    <audio autoplay loop>
-        <source src="background_audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- Audio elements -->
+    <audio id="audio1" src="bgaudio.mp3"></audio>
+    <audio id="audio2" src="audio2.mp3"></audio>
+
+    <script>
+        function playAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            audio.play();
+        }
+    </script>
 </body>
 </html>
