@@ -24,15 +24,20 @@
 </head>
 <body>
     <div class="image-grid">
-        <img src="media/brianna.jpg" alt="Image 1" onclick="playMedia('media/bgaudio.mp3')">
-        <img src="media/image2.jpg" alt="Image 2" onclick="window.location.href = 'https://bri2cute.github.io';">
+        <img src="media/brianna.jpg" alt="Image 1" onclick="playMedia('bgaudio.mp3')">
+        <img src="image2.jpg" alt="Image 2" onclick="window.location.href = 'https://bri2cute.github.io';">
         <!-- Add more images and videos as needed -->
     </div>
 
+    <!-- Audio elements -->
+    <audio id="audio1" src="bgaudio.mp3"></audio>
+    <audio id="audio2" src="media/audio2.mp3"></audio>
+
     <script>
         function playMedia(mediaSrc) {
-            var audio = new Audio(mediaSrc); // Create a new Audio object with the specified source
-            audio.play(); // Play the audio
+            var audio = document.getElementById('audio1');
+            audio.src = mediaSrc;
+            audio.play();
         }
     </script>
 </body>
