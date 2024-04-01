@@ -13,12 +13,20 @@
         .image-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px; /* Optional: Adds gap between grid items */
+        }
+        .image-grid img {
+            max-width: 100%; /* Ensures images don't exceed grid item width */
+            height: auto; /* Maintains aspect ratio */
         }
     </style>
 </head>
 <body>
     <div class="image-grid">
-        <!-- Your image grid items go here -->
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <!-- Add more images as needed -->
     </div>
 
     <!-- Autoplay audio element -->
