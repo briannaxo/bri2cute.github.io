@@ -1,2 +1,1 @@
-# bri2cute.github.io
-My Website
+# Hello World!
