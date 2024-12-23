@@ -115,11 +115,21 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            const searchBar = document.getElementById('googleSearchBar');
+
+            if (menu.style.display === 'none') {
+                
+                menu.style.display = 'block';
+                searchBar.style.display = 'none';
+            } else {
+                
+                menu.style.display = 'none';
+                searchBar.style.display = 'none'; // Ensure search bar is hidden
+            }
         }
 
         function showSearchBar() {
-            // Hide the regular menu and show the Google search bar
+            
             const menu = document.getElementById('menu');
             const searchBar = document.getElementById('googleSearchBar');
 
@@ -136,7 +146,6 @@
             }
         }
 
-        // Play background audio when the page loads
         window.onload = function() {
             const audio = document.getElementById('backgroundAudio');
             audio.play().catch(function(error) {
